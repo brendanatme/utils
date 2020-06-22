@@ -2,9 +2,9 @@ import { expect } from 'chai';
 import camelCase from '../src/camel-case';
 
 describe('camelCase', () => {
-  it('converts slugs to camel case', () => {
+  it('converts uncleaned strings to camel case', () => {
     expect(
-      camelCase('my-prop-name')
+      camelCase('My Prop NAme!!')
     ).to.equal('myPropName');
   });
 });
