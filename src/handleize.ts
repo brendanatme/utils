@@ -5,5 +5,6 @@
  */
 export default (s: string): string => s
   .trim()
-  .replace(/[\W\s_]/g, '-')
+  .replace(/[\s_]/g, '-')
+  .replace(/[^a-zA-Z0-9\-]/g, '')
   .toLowerCase();

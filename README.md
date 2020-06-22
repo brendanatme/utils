@@ -1,6 +1,6 @@
 # Utils
 
-JS/TS helper methods
+JS/TS functional helper methods, no external dependencies.
 
 ## Usage
 
@@ -84,7 +84,7 @@ const decorated = decorate(
 import doOnce from '@brendanatme/utils/do-once';
 
 let i = 0;
-const once = utils.doOnce((n) => { i = i + n; });
+const once = doOnce((n) => { i = i + n; });
 [1, 2, 3].map((_i) => once(_i)); // i === 1
 
 ```
@@ -94,7 +94,7 @@ const once = utils.doOnce((n) => { i = i + n; });
 ```javascript
 import handleize from '@brendanatme/utils/handleize';
 
-handleize('No_$strange_Chars ALLOWED'); // 'no--strange-chars-allowed'
+handleize('No_$strange_Chars ALLOWED'); // 'no-strange-chars-allowed'
 
 ```
 

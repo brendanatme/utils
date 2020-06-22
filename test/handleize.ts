@@ -3,7 +3,7 @@ import handleize from '../src/handleize';
 
 describe('handleize', () => {
   it('handles non-word chars', () => {
-    expect(handleize('no#_extra(chars*allowed')).to.equal('no--extra-chars-allowed');
+    expect(handleize('no#extra(chars*allowed')).to.equal('noextracharsallowed');
   });
 
   it('handles uppercase chars', () => {
