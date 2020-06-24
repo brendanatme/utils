@@ -13,6 +13,7 @@ export { default as mapStringToObject } from './map-string-to-object';
 export { default as mergeArrays } from './merge-arrays';
 export { default as singularize } from './singularize';
 export { default as splitArray } from './split-array';
+export { default as splitAtIndex } from './split-at-index';
 export * as timer from './timer';
 export { default as transformKeys } from './transform-keys';
 export { default as wait } from './wait';

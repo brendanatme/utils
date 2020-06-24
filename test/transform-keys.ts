@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import transformKeys from '../src/transform-keys';
 
 describe('transformKeys', () => {
-  it('take an array of objects and sort into object keys by getter', () => {
+  it('takes an array of objects and sorts into object keys by getter', () => {
     const transform = (k: string) => `Crazy_${k}`;
     
     const input = {
