@@ -6,6 +6,7 @@ export { default as containsAny } from './contains-any';
 export { default as decorate } from './decorate';
 export { default as doOnce } from './do-once';
 export { default as handleize } from './handleize';
+export { default as injectHtml } from './inject-html';
 export { default as invertObject } from './invert-object';
 export { default as loadScript } from './load-script';
 export { default as mapArrayToObject } from './map-array-to-object';

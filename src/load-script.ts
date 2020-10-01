@@ -13,4 +13,4 @@ export default (scriptUrl: string, onLoad: (p: any) => any = () => {}): void => 
   script.src = scriptUrl;
 
   (window as any).document.head.appendChild(script);
-}
+};
