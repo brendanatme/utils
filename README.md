@@ -178,6 +178,26 @@ splitByCategory(catalog); // { Movies: [...], Books: [...] }
 
 ```
 
+### timer
+
+```javascript
+import * as timer from '@brendanatme/utils/timer';
+
+const myJobId = 'The Job Im Running';
+
+// optional: set log function (defaults to console.log)
+timer.setLogFn((...msgs) => console.warn(...msgs));
+
+// begins timer and logs message
+timer.start(myJobId); // --> "Timer: begin execution of 'The Job Im Running'"
+
+// ... perform task ...
+
+// logs length of execution time in MS:
+timer.stop(myJobId); // --> "Timer: execution of 'The Job Im Running' took 5146ms"
+
+```
+
 ### transformKeys
 
 ```javascript
