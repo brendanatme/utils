@@ -12,25 +12,37 @@
  *
  * timer.stop('id')
  */
+type LogFn = (...args: string[]) => any;
 
 const timerIds: { [k: string]: number; } = {};
-let timerLogger: (arg: any) => any;
+let logFn: LogFn;
 
-export const setLogger = (logger: (arg: any) => any): void => {
-  timerLogger = logger;
+export const setLogFn = (logArg: LogFn): void => {
+  logFn = logArg;
 };
 
-export const start = (id: string) => {
+const log = (msg: string) => logFn
+  ? logFn(msg)
+  : console.log(msg);
+
+export const start = (id: string): number => {
   timerIds[id] = +new Date();
+
+  log(
+    `Timer: begin execution of '${id}'`
+  );
+
+  return timerIds[id];
 };
 
-export const stop = (id: string) => {
+export const stop = (id: string): number => {
   const result = (+new Date()) - timerIds[id];
-  const msg = `Timer: execution of ${id} took ${result}ms`;
-
-  timerLogger
-    ? timerLogger(msg)
-    : console.log(msg);
+  
+  log(
+    `Timer: execution of '${id}' took ${result}ms`
+  );
   
   delete timerIds[id];
+
+  return result;
 };
