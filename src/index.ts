@@ -5,6 +5,7 @@ export { default as contains } from './contains';
 export { default as containsAny } from './contains-any';
 export { default as decorate } from './decorate';
 export { default as doOnce } from './do-once';
+export { default as forEachAsync } from './for-each-async';
 export { default as handleize } from './handleize';
 export { default as injectHtml } from './inject-html';
 export { default as invertObject } from './invert-object';
